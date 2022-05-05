@@ -1,0 +1,19 @@
+{
+  "name": "ticket-system",
+  "version": "0.1.0",
+  "description": "Sistema de tickets para resoolución de problemas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NogyJ0D/ticket-system.git"
+  },
+  "author": "Valentin Giarra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NogyJ0D/ticket-system/issues"
+  },
+  "homepage": "https://github.com/NogyJ0D/ticket-system#readme"
+}
