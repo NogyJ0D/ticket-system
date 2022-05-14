@@ -106,6 +106,8 @@ class Tickets {
       summary: data.summary
     }
 
+    await ticket.save()
+
     await sendEmail(
       ticket.email,
       'Ticket cerrado',
