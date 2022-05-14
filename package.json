@@ -1,10 +1,11 @@
 {
   "name": "ticket-system",
   "version": "0.1.0",
-  "description": "Sistema de tickets para resoolución de problemas.",
+  "description": "Sistema de tickets para resolución de problemas.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,23 @@
   "bugs": {
     "url": "https://github.com/NogyJ0D/ticket-system/issues"
   },
-  "homepage": "https://github.com/NogyJ0D/ticket-system#readme"
+  "homepage": "https://github.com/NogyJ0D/ticket-system#readme",
+  "devDependencies": {
+    "nodemon": "2.0.16",
+    "standard": "17.0.0"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "7.6.2",
+    "bcrypt": "5.0.1",
+    "cookie-parser": "1.4.6",
+    "cors": "2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "4.18.1",
+    "jsonwebtoken": "8.5.1",
+    "mongoose": "6.3.2",
+    "mongoose-paginate-v2": "1.6.3",
+    "mongoose-sequence": "5.3.1",
+    "mongoose-unique-validator": "3.0.0",
+    "nodemailer": "6.7.5"
+  }
 }
