@@ -14,15 +14,17 @@ const userRoutes = require('./routes/users')
 
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors())
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://nogyj0d-ticketsf.onrender.com/'],
+  credentials: true
+}))
 
 ticketsRoutes(app)
 authRoutes(app)
 userRoutes(app)
 
 app.listen(PORT, () => {
-  console.log('Working on port:')
-  console.log('http://localhost:' + PORT)
+  console.log('Working on port: ' + PORT)
 })
 
 app.get('/', (req, res) => {

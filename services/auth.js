@@ -57,6 +57,11 @@ class Auth {
       else return { fail: true, message: 'Las credenciales no coinciden.' }
     } else return { fail: true, message: 'El usuario no existe.' }
   }
+
+  async validateUser (data) {
+    const user = await this.users.getByFilter({ email: data.email })
+    return this.getToken(user)
+  }
 }
 
 module.exports = Auth

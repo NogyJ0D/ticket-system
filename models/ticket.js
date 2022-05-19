@@ -15,7 +15,8 @@ const ticketSchema = new mongoose.Schema({
 
   title: {
     type: String,
-    required: [true, 'Ingresa un título para el ticket.']
+    required: [true, 'Ingresa un título para el ticket.'],
+    maxlength: [32, 'El título puede contener hasta 32 caracteres.']
   },
 
   text: {
@@ -55,22 +56,11 @@ const ticketSchema = new mongoose.Schema({
 
   ticketNumber: Number,
 
-  comments: [{
-    text: {
-      type: String,
-      required: [true, 'Ingresa el texto del comentario.']
-    },
-
-    createdAt: {
-      type: Date,
-      default: Date.now()
-    },
-
-    createdBy: {
-      type: String,
-      required: [true, 'Ingresa tu nombre para el comentario.']
-    }
-  }]
+  secretKey: {
+    type: String,
+    required: true,
+    maxlength: 16
+  }
 
 }, { timestamps: true })
 ticketSchema.plugin(mongoosePaginate)
