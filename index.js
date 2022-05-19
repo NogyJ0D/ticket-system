@@ -15,7 +15,7 @@ const userRoutes = require('./routes/users')
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://nogyj0d-ticketsf.onrender.com/'],
+  origin: ['http://localhost:3000', 'https://nogyj0d-tickets.vercel.app'],
   credentials: true
 }))
 
